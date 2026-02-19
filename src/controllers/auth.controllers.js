@@ -28,6 +28,8 @@ const generateAccessAndRefreshToken = async(id) => {
 export const registerUser= asyncHandler(async(req,res) => {
 
 	const {fullName, email, password} = (req.body);	
+	console.log(req.body);
+	
 
 	if(
 		[fullName,email, password].some((fields) => 
@@ -77,6 +79,8 @@ export const registerUser= asyncHandler(async(req,res) => {
 
 export const userlogin = asyncHandler(async(req,res) => {	
 	const {email, password} = req.body
+	console.log(req.body);
+	
 
 	// if([email, password].some((field) => field.trim() === "")){
 	// 	throw new apiError(400, "All fileds are required")
